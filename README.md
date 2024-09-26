@@ -5,7 +5,7 @@ Submitted by: Thanh Nguyen (Drake) Do
 
 About this web app: List of England teams recently playing in Premier League conference.
 
-Time spent: **6** hours
+Time spent: **7** hours
 
 ## Required Features
 

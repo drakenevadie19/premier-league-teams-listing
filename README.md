@@ -37,6 +37,8 @@ Here's a walkthrough of implemented required features:
 <img src='https://imgur.com/a/qhOGCFL' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ![alt text](<PL teams listing.gif>)
+
+Youtube Link: https://www.youtube.com/watch?v=D0A02G9tzCg&ab_channel=ThanhNguyenDo
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  Add GIF tool here
 <!-- Recommended tools:

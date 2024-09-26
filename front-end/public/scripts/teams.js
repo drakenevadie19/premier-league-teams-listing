@@ -26,6 +26,7 @@ const renderGifts = async () => {
 
             const teamCity = document.createElement('p')
             teamCity.textContent = team.city
+            teamCity.style.fontStyle = "italic"
             bottomContainer.appendChild(teamCity)
 
             const link = document.createElement('a')
@@ -58,6 +59,11 @@ const renderGifts = async () => {
 // }
 
 const renderGift = async () => {
+    const headerArea = document.getElementById("header-div");
+    headerArea.style.height = "40vh";
+    headerArea.style.backgroundRepeat = "no-repeat";
+    headerArea.style.backgroundSize = "100% 100%";
+
     const requestedID = parseInt(window.location.pathname.split('/').pop());
     const response = await fetch("/teams");
     const data = await response.json();
@@ -84,13 +90,23 @@ const renderGift = async () => {
             } else {
                 console.error("Image element with id 'imageTag' not found.");
             }
-            console.log(document.getElementById('imageTag'));
-            // document.getElementById('name').textContent = team.name;
-            // document.getElementById('submittedBy').textContent = 'Submitted by: ' + team.submittedBy;
-            // document.getElementById('pricePoint').textContent = 'Price: ' + team.pricePoint;
-            // document.getElementById('audience').textContent = 'Great For: ' + team.audience;
-            // document.getElementById('description').textContent = team.description;
-            // document.title = `UnEarthed - ${team.name}`;
+            // console.log(document.getElementById('imageTag'));
+            const imageFrame = document.querySelector(".image-container");
+            // console.log(imageFrame);
+            imageFrame.style.width = "40vw";
+            imageFrame.style.height = "50vh";
+            imageFrame.style.padding = "25px";
+            imageTag.style.width = "100%";
+            imageTag.style.height = "100%";
+
+            document.querySelector('#name').textContent = team.team_name;
+            
+            document.getElementById('manager').textContent = "Manager: " + team.manager;
+            
+            document.getElementById('year_of_foundation').textContent = "Year of Foundation: " + team.year_of_foundation;
+            document.getElementById('city').textContent = "City: " + team.city;
+            document.getElementById('stadium').textContent = "Stadium: " + team.stadium;
+            document.getElementById('stadium_capacity').textContent = "Stadium Capacity: " + team.stadium_capacity;
         } else {
             const message = document.createElement('h2');
             message.textContent = 'Error 😞';

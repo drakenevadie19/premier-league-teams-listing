@@ -1,4 +1,4 @@
-const header1 = document.querySelector('header');
+const header1 = document.querySelector('#header-div');
 
 const headerContainer = document.createElement('div');
 headerContainer.className = 'header-container';
@@ -19,16 +19,40 @@ const headerRight = document.createElement('div');
 headerRight.className = 'header-right';
 
 const headerButton = document.createElement('button');
-headerButton.textContent = 'Explore more!';
-headerButton.className = 'explore-more-button'
-    
-headerButton.addEventListener('click', function handleClick(event) {
-  // window.location = '/';
-  window.location = '#team-lists';
-  document.getElementById("team-lists").scrollIntoView({
-    behavior: "smooth"
+
+const pathNow = window.location.pathname;
+
+// If on the root ("/"), call renderGifts
+if (pathNow === '/' || pathNow === '/index.html') {
+  header1.style.background = 'url("/landpage_background.gif")';
+
+  header1.style.backgroundRepeat = "no-repeat";
+  header1.style.backgroundSize = "100% 100%";
+
+  headerButton.textContent = 'Explore more!';
+  headerButton.className = 'explore-more-button'
+      
+  headerButton.addEventListener('click', function handleClick(event) {
+    // window.location = '/';
+    window.location = '#team-lists';
+    document.getElementById("team-lists").scrollIntoView({
+      behavior: "smooth"
+    });
   });
-})
+} else {
+  header1.style.background = 'url("/premier-league-header.jpg")';
+
+  header1.style.backgroundRepeat = "no-repeat";
+  header1.style.backgroundSize = "100% 100%";
+
+  headerButton.textContent = 'Back To List';
+  headerButton.className = 'explore-more-button'
+      
+  headerButton.addEventListener('click', function handleClick(event) {
+    window.location = '/';
+  });
+}
+
 
 headerRight.appendChild(headerButton);
 

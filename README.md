@@ -34,9 +34,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://imgur.com/a/qhOGCFL' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/cISnHPn.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-![alt text](<PL teams listing.gif>)
+![alt text](<https://i.imgur.com/cISnHPn.gif>)
 
 Youtube Link: https://www.youtube.com/watch?v=D0A02G9tzCg&ab_channel=ThanhNguyenDo
 <!-- Replace this with whatever GIF tool you used! -->

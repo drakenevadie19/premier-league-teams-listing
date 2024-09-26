@@ -22,12 +22,21 @@ const headerButton = document.createElement('button');
 
 const pathNow = window.location.pathname;
 
+const backgroundImage = ['url("/landpage_background.gif")', 'url("/landpage_background-2.jpg")', 'url("/landpage_background-3.png")', 'url("/landpage_background-4.jpg")'];
 // If on the root ("/"), call renderGifts
 if (pathNow === '/' || pathNow === '/index.html') {
-  header1.style.background = 'url("/landpage_background.gif")';
+  var i = 0;
+  setInterval(() => {
+    i++;
+    if (i === backgroundImage.length) {
+      i = 0;
+    }
+    header1.style.background = backgroundImage[i];
 
-  header1.style.backgroundRepeat = "no-repeat";
-  header1.style.backgroundSize = "100% 100%";
+    header1.style.backgroundRepeat = "no-repeat";
+    header1.style.backgroundSize = "100% 100%";
+  }, 3000)
+  
 
   headerButton.textContent = 'Explore more!';
   headerButton.className = 'explore-more-button'
@@ -40,7 +49,7 @@ if (pathNow === '/' || pathNow === '/index.html') {
     });
   });
 } else {
-  header1.style.background = 'url("/premier-league-header.jpg")';
+  header1.style.background = 'url("/premier-league-header.jpeg")';
 
   header1.style.backgroundRepeat = "no-repeat";
   header1.style.backgroundSize = "100% 100%";

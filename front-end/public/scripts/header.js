@@ -27,14 +27,14 @@ const backgroundImage = ['url("/landpage_background.gif")', 'url("/landpage_back
 if (pathNow === '/' || pathNow === '/index.html') {
   var i = 0;
   setInterval(() => {
-    i++;
-    if (i === backgroundImage.length) {
-      i = 0;
-    }
     header1.style.background = backgroundImage[i];
 
     header1.style.backgroundRepeat = "no-repeat";
     header1.style.backgroundSize = "100% 100%";
+    i++;
+    if (i === backgroundImage.length) {
+      i = 0;
+    }
   }, 3000)
   
 
